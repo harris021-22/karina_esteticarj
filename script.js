@@ -107,31 +107,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Play on first interaction
     const startAudio = () => {
         if (!audioStarted && bgAudio) {
-            bgAudio.play().then(() => {
-                audioStarted = true;
-                if(audioControl) {
-                    audioControl.classList.add('playing');
-                    if (bgAudio.volume < 0.5 && bgAudio.volume > 0) {
-                        audioControl.innerHTML = '<i class="ph ph-speaker-low"></i>';
-                    } else if (bgAudio.volume == 0) {
-                        audioControl.innerHTML = '<i class="ph ph-speaker-slash"></i>';
-                    } else {
-                        audioControl.innerHTML = '<i class="ph ph-speaker-high"></i>';
+            const playPromise = bgAudio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    audioStarted = true;
+                    if(audioControl) {
+                        audioControl.classList.add('playing');
+                        if (bgAudio.volume < 0.5 && bgAudio.volume > 0) {
+                            audioControl.innerHTML = '<i class="ph ph-speaker-low"></i>';
+                        } else if (bgAudio.volume == 0) {
+                            audioControl.innerHTML = '<i class="ph ph-speaker-slash"></i>';
+                        } else {
+                            audioControl.innerHTML = '<i class="ph ph-speaker-high"></i>';
+                        }
                     }
-                }
-            }).catch(err => {
-                console.log("Audio play blocked by browser:", err);
-            });
-            
-            // Remove listeners after first interaction
-            document.removeEventListener('click', startAudio);
-            document.removeEventListener('touchstart', startAudio);
-            document.removeEventListener('scroll', startAudio);
+                    // Remove listeners after SUCCESSFUL play
+                    document.removeEventListener('click', startAudio);
+                    document.removeEventListener('touchstart', startAudio);
+                    document.removeEventListener('scroll', startAudio);
+                    document.removeEventListener('touchend', startAudio);
+                }).catch(err => {
+                    console.log("Audio play blocked by browser:", err);
+                    // If blocked, keep the listeners so the next click can try again
+                });
+            }
         }
     };
 
     document.addEventListener('click', startAudio);
     document.addEventListener('touchstart', startAudio);
+    document.addEventListener('touchend', startAudio);
 
     // Toggle audio button
     if (audioControl && bgAudio) {
