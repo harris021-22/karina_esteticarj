@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brisa Estética Integrativa por Karina Gazetta</title>
-    <meta name="description" content="Estética que cuida de você por inteiro. Cuidado integrativo, unindo técnica, sensibilidade e bem-estar para realçar sua beleza natural.">
-    
+    <meta name="description"
+        content="Estética que cuida de você por inteiro. Cuidado integrativo, unindo técnica, sensibilidade e bem-estar para realçar sua beleza natural.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Background Audio -->
+    <audio id="bg-audio" src="Documento_de_Andrew_Harris.mp3" loop></audio>
+
+    <!-- Audio Controls -->
+    <div class="audio-wrapper">
+        <button id="audio-control" class="audio-btn" aria-label="Toggle Audio">
+            <i class="ph ph-speaker-slash"></i>
+        </button>
+        <div class="volume-slider-container">
+            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="0.25"
+                aria-label="Volume">
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -27,7 +45,7 @@
                 <span>ESTÉTICA INTEGRATIVA</span>
                 <span class="logo-sub">POR KARINA GAZETTA</span>
             </a>
-            
+
             <nav class="nav-links">
                 <a href="#inicio" class="active">Início</a>
                 <a href="#sobre">Sobre</a>
@@ -54,8 +72,9 @@
             <div class="hero-content">
                 <span class="eyebrow">BEM-ESTAR EM TODAS AS SUAS FASES</span>
                 <h2 class="hero-title">Estética que cuida<br>de <em>você por inteiro.</em></h2>
-                <p class="hero-desc">Cuidado integrativo, unindo técnica, sensibilidade<br>e bem-estar para realçar a sua beleza natural.</p>
-                
+                <p class="hero-desc">Cuidado integrativo, unindo técnica, sensibilidade<br>e bem-estar para realçar a
+                    sua beleza natural.</p>
+
                 <div class="hero-actions">
                     <a href="https://wa.me/5521991093995" target="_blank" class="btn btn-primary">
                         <i class="ph ph-whatsapp-logo"></i> Agendar avaliação <i class="ph ph-arrow-right"></i>
@@ -73,10 +92,7 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="hero-image-wrapper">
-                <img src="747038930_18611669422029044_3808144454634761825_n.jpg" alt="Karina Gazetta - Estética Integrativa" class="hero-img">
-            </div>
+
         </div>
     </section>
 
@@ -123,47 +139,88 @@
             <div class="section-header text-center">
                 <span class="eyebrow">NOSSOS TRATAMENTOS</span>
                 <h2 class="section-title">Procedimentos para o seu bem-estar</h2>
-                <p class="section-desc">Tratamentos estéticos integrativos que unem saúde, beleza e qualidade de vida.</p>
+                <p class="section-desc">Tratamentos estéticos integrativos que unem saúde, beleza e qualidade de vida.
+                </p>
             </div>
 
             <div class="treatments-grid">
                 <!-- Treatment 1 -->
                 <div class="treatment-card">
-                    <img src="auriculoterapia.jpg" alt="Auriculoterapia">
+                    <div class="card-img-wrapper">
+                        <img src="limpeza.jpg" alt="Limpeza de Pele Brisa">
+                    </div>
                     <div class="treatment-card-content">
-                        <h3>Auriculoterapia</h3>
-                        <p>Equilíbrio, bem-estar e auxílio em diversos aspectos da saúde física e emocional.</p>
-                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Auriculoterapia" class="card-link" target="_blank">Saiba mais <i class="ph ph-arrow-right"></i></a>
+                        <h3>Limpeza de Pele</h3>
+                        <p class="treatment-subtitle">Transformação Facial com Cuidados Personalizados.</p>
+                        <p>Protocolos personalizados. Utilizamos cosméticos de alta qualidade para remover impurezas,
+                            cravos e células mortas, deixando a pele mais iluminada.</p>
+                        <ul class="treatment-benefits">
+                            <li><i class="ph ph-check-circle"></i> Redução da acne e desobstrução</li>
+                            <li><i class="ph ph-check-circle"></i> Absorção ideal de cosméticos</li>
+                            <li><i class="ph ph-check-circle"></i> Aparência jovem e revitalizada</li>
+                        </ul>
+                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Limpeza de Pele"
+                            class="card-link" target="_blank">Agendar <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Treatment 2 -->
                 <div class="treatment-card">
-                    <img src="limpeza.jpg" alt="Limpeza de Pele">
+                    <div class="card-img-wrapper">
+                        <img src="drenagem.jpg" alt="Drenagem Linfática Brisa">
+                    </div>
                     <div class="treatment-card-content">
-                        <h3>Limpeza de Pele</h3>
-                        <p>Pele mais saudável, limpa e luminosa, com cuidado profissional e seguro.</p>
-                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Limpeza de Pele" class="card-link" target="_blank">Saiba mais <i class="ph ph-arrow-right"></i></a>
+                        <h3>Drenagem Linfática</h3>
+                        <p class="treatment-subtitle">Liberte-se do Inchaço e Sinta a Leveza.</p>
+                        <p>Massagem suave e ritmada que atua no sistema linfático. Ideal para reduzir a sobrecarga de
+                            líquidos, proteger seu corpo e combater inflamações.</p>
+                        <ul class="treatment-benefits">
+                            <li><i class="ph ph-check-circle"></i> Redução de inchaço e dores</li>
+                            <li><i class="ph ph-check-circle"></i> Acelera a cicatrização pós cirúrgico</li>
+                            <li><i class="ph ph-check-circle"></i> Recuperação após atividade física</li>
+                        </ul>
+                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Drenagem Linfática"
+                            class="card-link" target="_blank">Agendar <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Treatment 3 -->
                 <div class="treatment-card">
-                    <img src="drenagem.jpg" alt="Drenagem Linfática">
+                    <div class="card-img-wrapper">
+                        <img src="massagem.jpg" alt="Massagem Relaxante Brisa">
+                    </div>
                     <div class="treatment-card-content">
-                        <h3>Drenagem Linfática</h3>
-                        <p>Auxilia na redução de inchaço, melhora da circulação e sensação de leveza.</p>
-                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Drenagem Linfática" class="card-link" target="_blank">Saiba mais <i class="ph ph-arrow-right"></i></a>
+                        <h3>Massagem Relaxante</h3>
+                        <p class="treatment-subtitle">Alívio Profundo com Toque de Aconchego.</p>
+                        <p>Movimentos derivados da massagem sueca associados a técnicas terapêuticas como pedras quentes
+                            e manta aquecida. O escape ideal do ritmo agitado.</p>
+                        <ul class="treatment-benefits">
+                            <li><i class="ph ph-check-circle"></i> Alívio da ansiedade e estresse</li>
+                            <li><i class="ph ph-check-circle"></i> Redução de tensão muscular</li>
+                            <li><i class="ph ph-check-circle"></i> Renovação da energia vital</li>
+                        </ul>
+                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Massagem Relaxante"
+                            class="card-link" target="_blank">Agendar <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Treatment 4 -->
                 <div class="treatment-card">
-                    <img src="massagem.jpg" alt="Massagem Relaxante">
+                    <div class="card-img-wrapper">
+                        <img src="auriculoterapia.jpg" alt="Auriculoterapia Brisa">
+                    </div>
                     <div class="treatment-card-content">
-                        <h3>Massagem Relaxante</h3>
-                        <p>Alívio das tensões, redução do estresse e mais equilíbrio para o seu dia a dia.</p>
-                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Massagem Relaxante" class="card-link" target="_blank">Saiba mais <i class="ph ph-arrow-right"></i></a>
+                        <h3>Auriculoterapia</h3>
+                        <p class="treatment-subtitle">Equilíbrio Energético e Bem-Estar</p>
+                        <p>Técnica natural da medicina chinesa que promove o equilíbrio do organismo através de pontos
+                            na orelha, tratando diversas condições sem efeitos colaterais.</p>
+                        <ul class="treatment-benefits">
+                            <li><i class="ph ph-check-circle"></i> Alívio de dores crônicas</li>
+                            <li><i class="ph ph-check-circle"></i> Melhora da imunidade e sono</li>
+                            <li><i class="ph ph-check-circle"></i> Redução da ansiedade</li>
+                        </ul>
+                        <a href="https://wa.me/5521991093995?text=Olá, gostaria de saber mais sobre a Auriculoterapia"
+                            class="card-link" target="_blank">Agendar <i class="ph ph-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -176,14 +233,17 @@
             <div class="about-image">
                 <img src="747038930_18611669422029044_3808144454634761825_n.jpg" alt="Karina Gazetta">
             </div>
-            
+
             <div class="about-content">
                 <span class="eyebrow">SOBRE</span>
                 <h2 class="section-title">Karina Gazetta</h2>
                 <p class="about-subtitle">Estética integrativa com olhar humano e individualizado.</p>
-                <p>Sou Karina Gazetta, especialista em estética integrativa, e acredito que o cuidado vai muito além da estética. Meu trabalho é unir técnica, conhecimento e sensibilidade para promover bem-estar, saúde e autoconfiança em todas as fases da vida.</p>
-                <p>Estou em constante atualização para oferecer um atendimento seguro, moderno e personalizado, sempre respeitando a sua individualidade.</p>
-                
+                <p>Sou Karina Gazetta, especialista em estética integrativa, e acredito que o cuidado vai muito além da
+                    estética. Meu trabalho é unir técnica, conhecimento e sensibilidade para promover bem-estar, saúde e
+                    autoconfiança em todas as fases da vida.</p>
+                <p>Estou em constante atualização para oferecer um atendimento seguro, moderno e personalizado, sempre
+                    respeitando a sua individualidade.</p>
+
                 <a href="https://wa.me/5521991093995" target="_blank" class="btn btn-primary mt-4">
                     <i class="ph ph-whatsapp-logo"></i> Agendar avaliação <i class="ph ph-arrow-right"></i>
                 </a>
@@ -263,9 +323,18 @@
                 <h2 class="section-title">Avaliações no Google</h2>
                 <p>A confiança de quem já viveu essa experiência.</p>
             </div>
-            
+
             <div class="google-rating">
-                <svg class="google-logo" viewBox="0 0 48 48" width="48px" height="48px"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
+                <svg class="google-logo" viewBox="0 0 48 48" width="48px" height="48px">
+                    <path fill="#FFC107"
+                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                    <path fill="#FF3D00"
+                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                    <path fill="#4CAF50"
+                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                    <path fill="#1976D2"
+                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                </svg>
                 <div class="rating-info">
                     <strong>5,0/5 no Google</strong>
                     <div class="stars">
@@ -275,12 +344,13 @@
                         <i class="ph-fill ph-star"></i>
                         <i class="ph-fill ph-star"></i>
                     </div>
-                    <span>123 avaliações</span>
+                    <span>124 avaliações</span>
                 </div>
             </div>
 
             <div class="reviews-action">
-                <a href="https://www.google.com/maps/place/Brisa+Est%C3%A9tica+Integrativa+por+Karina+Gazetta+-+Doutor+Laureano/@-22.7663733,-43.2954099,1002m/data=!3m2!1e3!4b1!4m6!3m5!1s0x99710431b6c0bb:0xef3cb80a1af386c5!8m2!3d-22.7663733!4d-43.2954099!16s%2Fg%2F11ktmcs8pf?authuser=0&hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary">
+                <a href="https://www.google.com/maps/place/Brisa+Est%C3%A9tica+Integrativa+por+Karina+Gazetta+-+Doutor+Laureano/@-22.7663733,-43.2954099,1002m/data=!3m2!1e3!4b1!4m6!3m5!1s0x99710431b6c0bb:0xef3cb80a1af386c5!8m2!3d-22.7663733!4d-43.2954099!16s%2Fg%2F11ktmcs8pf?authuser=0&hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="btn btn-primary">
                     Ver avaliações no Google <i class="ph ph-arrow-square-out"></i>
                 </a>
                 <p class="reviews-note">Opiniões reais de clientes atendidos<br>por Karina Gazetta.</p>
@@ -314,7 +384,7 @@
             <div class="location-info">
                 <span class="eyebrow" style="color: #c9ab81;">CONTATO E LOCALIZAÇÃO</span>
                 <h2 class="section-title">Estamos te esperando<br>em Duque de Caxias.</h2>
-                
+
                 <div class="contact-item mt-4">
                     <i class="ph ph-map-pin"></i>
                     <div>
@@ -322,7 +392,7 @@
                         <p>Duque de Caxias - RJ</p>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <i class="ph ph-phone"></i>
                     <div>
@@ -331,10 +401,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="location-map">
                 <!-- Simple styling trick to mimic the map from the image -->
-                <iframe src="https://maps.google.com/maps?q=Brisa%20Est%C3%A9tica%20Integrativa%20por%20Karina%20Gazetta%20-%20Doutor%20Laureano&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://maps.google.com/maps?q=Brisa%20Est%C3%A9tica%20Integrativa%20por%20Karina%20Gazetta%20-%20Doutor%20Laureano&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
             <div class="location-image">
@@ -354,7 +426,7 @@
                     <span class="logo-sub">POR KARINA GAZETTA</span>
                 </a>
             </div>
-            
+
             <div class="footer-links-group">
                 <h4>Links rápidos</h4>
                 <ul>
@@ -365,11 +437,12 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-group">
                 <h4>Contato</h4>
                 <ul>
-                    <li><a href="https://wa.me/5521991093995" target="_blank"><i class="ph ph-whatsapp-logo"></i> (21) 99109-3995</a></li>
+                    <li><a href="https://wa.me/5521991093995" target="_blank"><i class="ph ph-whatsapp-logo"></i> (21)
+                            99109-3995</a></li>
                     <li>
                         <a href="#" class="footer-address">
                             <i class="ph ph-map-pin"></i>
@@ -378,14 +451,15 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-group">
                 <h4>Nos acompanhe</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/karina_esteticarj?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank"><i class="ph ph-instagram-logo"></i> @karina_esteticarj</a></li>
+                    <li><a href="https://www.instagram.com/karina_esteticarj?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                            target="_blank"><i class="ph ph-instagram-logo"></i> @karina_esteticarj</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-group">
                 <h4>Políticas</h4>
                 <ul>
@@ -394,18 +468,20 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom container">
             <p>&copy; 2024 Brisa Estética Integrativa por Karina Gazetta. Todos os direitos reservados.</p>
-            <p>Desenvolvido com foco no seu bem-estar.</p>
+            <p>Desenvolvido por <a href="https://wa.me/5521964551053?text=Ol%C3%A1%20Andrew%2C%20boa%20tarde!%20Tudo%20bem%3F%20Vim%20pelo%20site%20da%20Est%C3%A9tica%20Integrativa%20Brisa%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20de%20como%20fazer%20o%20meu%20site." target="_blank" style="text-decoration: underline;">Andrew Harris</a></p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button (Mobile Only) -->
-    <a href="https://wa.me/5521991093995" target="_blank" class="floating-whatsapp" aria-label="Fale conosco pelo WhatsApp">
+    <a href="https://wa.me/5521991093995" target="_blank" class="floating-whatsapp"
+        aria-label="Fale conosco pelo WhatsApp">
         <i class="ph ph-whatsapp-logo"></i>
     </a>
 
     <script src="script.js"></script>
 </body>
+
 </html>
