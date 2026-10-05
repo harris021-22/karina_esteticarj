@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.style.top = '80px';
             navLinks.style.left = '0';
             navLinks.style.width = '100%';
-            navLinks.style.background = '#f6f4f0';
+            navLinks.style.background = '#0067A6';
             navLinks.style.padding = '20px';
             navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
         });

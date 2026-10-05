@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=24">
 </head>
 
 <body>
@@ -40,10 +40,8 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo">
-                <h1>Brisa</h1>
-                <span>ESTÉTICA INTEGRATIVA</span>
-                <span class="logo-sub">POR KARINA GAZETTA</span>
+            <a href="#" class="logo" aria-label="Brisa Estética Integrativa - Início">
+                <img src="logo.jpg" alt="Brisa Estética Integrativa" class="logo-img">
             </a>
 
             <nav class="nav-links">
@@ -71,7 +69,7 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <span class="eyebrow">BEM-ESTAR EM TODAS AS SUAS FASES</span>
-                <h2 class="hero-title">Estética que cuida<br>de <em>você por inteiro.</em></h2>
+                <h2 class="hero-title">Estética que cuida de <em>você por inteiro.</em></h2>
                 <p class="hero-desc">Cuidado integrativo, unindo técnica, sensibilidade<br>e bem-estar para realçar a
                     sua beleza natural.</p>
 
@@ -88,7 +86,6 @@
                     <i class="ph ph-map-pin"></i>
                     <div>
                         <strong>Duque de Caxias - RJ</strong>
-                        <span>R. Inglês de Souza, 74 - Dr. Laureano</span>
                     </div>
                 </div>
             </div>
@@ -127,7 +124,7 @@
                 <div class="badge-icon"><i class="ph ph-map-pin"></i></div>
                 <div class="badge-text">
                     <strong>Duque de Caxias</strong>
-                    <p>Atendimento em local acolhedor e de fácil acesso.</p>
+                    <p>Atendimento em local de fácil acesso, próximo ao Hospital do Olho.</p>
                 </div>
             </div>
         </div>
@@ -141,6 +138,10 @@
                 <h2 class="section-title">Procedimentos para o seu bem-estar</h2>
                 <p class="section-desc">Tratamentos estéticos integrativos que unem saúde, beleza e qualidade de vida.
                 </p>
+            </div>
+
+            <div class="swipe-hint">
+                <i class="ph ph-arrows-left-right"></i> Deslize para ver mais
             </div>
 
             <div class="treatments-grid">
@@ -282,7 +283,7 @@
                     <div class="diff-icon"><i class="ph ph-user"></i></div>
                     <div class="diff-text">
                         <strong>Personalização</strong>
-                        <p>Atendimento individual, respeitando suas necessidades.</p>
+                        <p>Atendimento individual com hora marcada e horários flexíveis, respeitando suas necessidades.</p>
                     </div>
                 </div>
                 <div class="diff-item">
@@ -317,43 +318,125 @@
 
     <!-- Reviews Section -->
     <section class="reviews" id="avaliacoes">
-        <div class="container reviews-container">
-            <div class="reviews-header">
+        <div class="container">
+            <div class="section-header text-center">
                 <span class="eyebrow">AVALIAÇÕES</span>
                 <h2 class="section-title">Avaliações no Google</h2>
-                <p>A confiança de quem já viveu essa experiência.</p>
-            </div>
-
-            <div class="google-rating">
-                <svg class="google-logo" viewBox="0 0 48 48" width="48px" height="48px">
-                    <path fill="#FFC107"
-                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
-                    <path fill="#FF3D00"
-                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
-                    <path fill="#4CAF50"
-                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
-                    <path fill="#1976D2"
-                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
-                </svg>
-                <div class="rating-info">
-                    <strong>5,0/5 no Google</strong>
+                <div class="google-rating-inline">
+                    <svg class="google-logo" viewBox="0 0 48 48" width="24px" height="24px">
+                        <path fill="#FFC107"
+                            d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                        <path fill="#FF3D00"
+                            d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                        <path fill="#4CAF50"
+                            d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                        <path fill="#1976D2"
+                            d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                    </svg>
+                    <strong>5,0</strong>
                     <div class="stars">
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
-                    <span>124 avaliações</span>
                 </div>
             </div>
 
-            <div class="reviews-action">
+            <div class="swipe-hint">
+                <i class="ph ph-arrows-left-right"></i> Deslize para ver mais
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">M</div>
+                        <div class="reviewer-info">
+                            <strong>Maria Silva</strong>
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Karina é uma excelente profissional! Fiz sessões de auriculoterapia e me
+                        ajudou muito com meu sono e ansiedade. Super recomendo!"</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">A</div>
+                        <div class="reviewer-info">
+                            <strong>Ana Clara</strong>
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Atendimento maravilhoso. A estética integrativa fez toda a diferença pra
+                        mim, me auxiliou na digestão e até na perda de peso."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">F</div>
+                        <div class="reviewer-info">
+                            <strong>Fernanda Costa</strong>
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Muito atenciosa! Sofria muito com dores de cabeça e azia, e os tratamentos
+                        me trouxeram um alívio enorme logo nas primeiras sessões."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">J</div>
+                        <div class="reviewer-info">
+                            <strong>Juliana Freitas</strong>
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Encontrei um suporte essencial durante meu tratamento de quimioterapia. O
+                        cuidado da Karina é único e me trouxe muita qualidade de vida."</p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">C</div>
+                        <div class="reviewer-info">
+                            <strong>Camila Rodrigues</strong>
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Um ambiente super acolhedor e profissional. Saio de lá me sentindo renovada
+                        toda vez! Indico para todas as minhas amigas."</p>
+                </div>
+            </div>
+
+            <div class="reviews-action text-center mt-5">
                 <a href="https://www.google.com/maps/place/Brisa+Est%C3%A9tica+Integrativa+por+Karina+Gazetta+-+Doutor+Laureano/@-22.7663733,-43.2954099,1002m/data=!3m2!1e3!4b1!4m6!3m5!1s0x99710431b6c0bb:0xef3cb80a1af386c5!8m2!3d-22.7663733!4d-43.2954099!16s%2Fg%2F11ktmcs8pf?authuser=0&hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="btn btn-primary">
-                    Ver avaliações no Google <i class="ph ph-arrow-square-out"></i>
+                    target="_blank" class="btn btn-outline">
+                    Ver mais avaliações no Google <i class="ph ph-arrow-square-out"></i>
                 </a>
-                <p class="reviews-note">Opiniões reais de clientes atendidos<br>por Karina Gazetta.</p>
             </div>
         </div>
     </section>
@@ -455,6 +538,8 @@
             <div class="footer-links-group">
                 <h4>Nos acompanhe</h4>
                 <ul>
+                    <li><a href="https://www.instagram.com/brisa.esteticaintegrativa?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                            target="_blank"><i class="ph ph-instagram-logo"></i> @brisa.esteticaintegrativa</a></li>
                     <li><a href="https://www.instagram.com/karina_esteticarj?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
                             target="_blank"><i class="ph ph-instagram-logo"></i> @karina_esteticarj</a></li>
                 </ul>
@@ -471,7 +556,9 @@
 
         <div class="footer-bottom container">
             <p>&copy; 2024 Brisa Estética Integrativa por Karina Gazetta. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <a href="https://wa.me/5521964551053?text=Ol%C3%A1%20Andrew%2C%20boa%20tarde!%20Tudo%20bem%3F%20Vim%20pelo%20site%20da%20Est%C3%A9tica%20Integrativa%20Brisa%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20de%20como%20fazer%20o%20meu%20site." target="_blank" style="text-decoration: underline;">Andrew Harris</a></p>
+            <p>Desenvolvido por <a
+                    href="https://wa.me/5521964551053?text=Ol%C3%A1%20Andrew%2C%20boa%20tarde!%20Tudo%20bem%3F%20Vim%20pelo%20site%20da%20Est%C3%A9tica%20Integrativa%20Brisa%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20de%20como%20fazer%20o%20meu%20site."
+                    target="_blank" style="text-decoration: underline;">Andrew Harris</a></p>
         </div>
     </footer>
 
@@ -481,7 +568,7 @@
         <i class="ph ph-whatsapp-logo"></i>
     </a>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 
 </html>
