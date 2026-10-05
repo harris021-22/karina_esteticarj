@@ -70,38 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Background Audio Logic
     const bgAudio = document.getElementById('bg-audio');
     const audioControl = document.getElementById('audio-control');
-    const volumeSlider = document.getElementById('volume-slider');
-    const audioWrapper = document.querySelector('.audio-wrapper');
     let audioStarted = false;
     
     // Set initial volume to 25%
     if (bgAudio) {
         bgAudio.volume = 0.25;
-        if (volumeSlider) {
-            volumeSlider.value = 0.25;
-        }
-    }
-
-    // Handle Volume Slider
-    if (volumeSlider && bgAudio) {
-        // Prevent click events on slider from bubbling up to document and triggering startAudio immediately if we want to separate logic,
-        // but startAudio has a check below.
-        volumeSlider.addEventListener('click', (e) => e.stopPropagation());
-        volumeSlider.addEventListener('touchstart', (e) => e.stopPropagation());
-
-        volumeSlider.addEventListener('input', (e) => {
-            bgAudio.volume = e.target.value;
-            // Update icon based on volume if audio is playing
-            if (audioStarted && !bgAudio.paused) {
-                if (bgAudio.volume == 0) {
-                    audioControl.innerHTML = '<i class="ph ph-speaker-slash"></i>';
-                } else if (bgAudio.volume < 0.5) {
-                    audioControl.innerHTML = '<i class="ph ph-speaker-low"></i>';
-                } else {
-                    audioControl.innerHTML = '<i class="ph ph-speaker-high"></i>';
-                }
-            }
-        });
     }
 
     // Play on first interaction
@@ -143,31 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
         audioControl.addEventListener('click', (e) => {
             e.stopPropagation(); // prevent triggering startAudio again if not started
             
-            // Toggle slider visibility
-            if (audioWrapper) {
-                audioWrapper.classList.toggle('show-slider');
-            }
-            
-            // If the audio hasn't started or is paused, play it when interacting with the button.
-            // Only toggle pause if they are not just opening the menu?
-            // The user says "quando clicar no círculo não vai tirar o volume, vai abrir a aba"
-            // So we don't play/pause on click. Just open the tab.
-            // BUT wait, we must start it if it never started.
             if (!audioStarted) {
                 startAudio();
-            }
-        });
-
-        // Close slider when clicking outside
-        document.addEventListener('click', (e) => {
-            if (audioWrapper && !audioWrapper.contains(e.target)) {
-                audioWrapper.classList.remove('show-slider');
-            }
-        });
-        
-        document.addEventListener('touchstart', (e) => {
-            if (audioWrapper && !audioWrapper.contains(e.target)) {
-                audioWrapper.classList.remove('show-slider');
+            } else {
+                if (bgAudio.paused) {
+                    bgAudio.play();
+                    audioControl.innerHTML = '<i class="ph ph-speaker-high"></i>';
+                } else {
+                    bgAudio.pause();
+                    audioControl.innerHTML = '<i class="ph ph-speaker-slash"></i>';
+                }
             }
         });
     }

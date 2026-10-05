@@ -1,43 +1,54 @@
 :root {
     /* Brisa Beach Palette (sampled from logo) */
-    --ocean: #0067A6;        /* Logo background */
-    --ocean-deep: #004F80;   /* Hover, footer, overlays */
-    --ocean-ink: #0B2E45;    /* Primary text */
-    --aqua: #A8D8EC;         /* Logo waves */
-    --aqua-mist: #E4F2F8;    /* Shallow-water surface */
-    --foam: #CFE8F3;         /* Secondary text on ocean */
-    --leaf: #8CC26A;         /* Logo leaves */
-    --leaf-deep: #3F7A2C;    /* Leaf on light surfaces (AA) */
+    --ocean: #0067A6;
+    /* Logo background */
+    --ocean-deep: #004F80;
+    /* Hover, footer, overlays */
+    --ocean-ink: #0B2E45;
+    /* Primary text */
+    --aqua: #A8D8EC;
+    /* Logo waves */
+    --aqua-mist: #E4F2F8;
+    /* Shallow-water surface */
+    --foam: #CFE8F3;
+    /* Secondary text on ocean */
+    --leaf: #8CC26A;
+    /* Logo leaves */
+    --leaf-deep: #3F7A2C;
+    /* Leaf on light surfaces (AA) */
     --leaf-mist: #EEF6E8;
-    --sun: #F5DFA6;          /* Warm sand-yellow from logo lettering */
-    --sun-hover: #EDCD7C;
-    --sand-deep: #8A6418;    /* Sand accent text on light (AA) */
+    --sun: #ffeed7;
+    /* Warm sand-yellow from logo lettering */
+    --sun-hover: #d3b98c;
+    --sand-deep: #8A6418;
+    /* Sand accent text on light (AA) */
 
-    --bg-light: #FBF6EA; /* Sand, from logo lettering */
+    --bg-light: var(--sun);
+    /* Same color as the sun/buttons */
     --bg-white: #ffffff;
     --bg-dark: var(--ocean);
     --bg-darker: var(--ocean-deep);
-    
+
     --text-dark: var(--ocean-ink);
     --text-light: #FDF8EE;
     --text-muted: #4A6577;
-    
+
     --accent-gold: var(--sun);
     --accent-gold-hover: var(--sun-hover);
-    
+
     --border-color: #EDE3CC;
-    
+
     /* Typography */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
     --font-script: 'Great Vibes', cursive;
-    
+
     /* Spacing & Layout */
     --container-max: 1200px;
     --section-padding: 80px;
     --border-radius: 12px;
     --border-radius-lg: 24px;
-    
+
     /* Transitions */
     --transition: all 0.3s ease;
 }
@@ -106,7 +117,12 @@ html {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 500;
     line-height: 1.2;
@@ -201,12 +217,12 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
-.header-container > .btn-primary {
+.header-container>.btn-primary {
     background-color: var(--aqua);
     color: var(--ocean-deep);
 }
 
-.header-container > .btn-primary:hover {
+.header-container>.btn-primary:hover {
     background-color: #FFFFFF;
 }
 
@@ -311,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--bg-white);
-    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title em {
@@ -321,16 +337,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-content .eyebrow {
     color: var(--bg-white);
-    border-top: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 10px;
 }
 
 .hero-desc {
     font-size: 1.2rem;
-    color: var(--bg-light);
+    color: var(--bg-white);
     margin: 0 auto 2.5rem;
     max-width: 600px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-actions {
@@ -358,13 +374,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     font-weight: 600;
     color: var(--bg-white);
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-location span {
     font-size: 0.9rem;
     color: var(--bg-light);
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-image-wrapper {
@@ -472,20 +488,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .treatments-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 48px;
 }
 
 .treatment-card {
-    background-color: var(--bg-light);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    transition: var(--transition);
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 24px;
 }
 
-.treatment-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 79, 128, 0.1);
+.treatment-card:last-child {
+    border-bottom: none;
 }
 
 .card-img-wrapper {
@@ -722,7 +736,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bg-white);
     padding: 40px;
     border-radius: var(--border-radius-lg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .google-rating {
@@ -861,7 +875,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 16px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     white-space: nowrap;
 }
@@ -904,9 +918,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main Footer */
 .main-footer {
-    background: linear-gradient(to bottom, var(--bg-white) 0%, rgba(255,255,255,0) 30%), url('areia.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(229, 205, 161, 0.3);
+    background-image: linear-gradient(to bottom, var(--bg-white) 0%, rgba(229, 205, 161, 0.3) 30%, rgba(229, 205, 161, 0) 100%), url('Fundo areia Brisa.png');
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
     color: var(--ocean-ink);
     padding: 80px 0 100px;
 }
@@ -919,7 +935,8 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid rgba(0, 103, 166, 0.2);
 }
 
-.footer-brand h2, .footer-brand span {
+.footer-brand h2,
+.footer-brand span {
     color: var(--ocean);
 }
 
@@ -972,28 +989,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1024px) {
-    .hero-container, .about-container {
+
+    .hero-container,
+    .about-container {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-image-wrapper {
         min-height: 400px;
     }
-    
-    .treatments-grid, .differentials-grid {
+
+    .differentials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .results-container {
         grid-template-columns: 1fr;
     }
-    
+
     .reviews-container {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 20px;
     }
-    
+
     .google-rating {
         border: none;
         border-top: 1px solid var(--border-color);
@@ -1001,47 +1020,61 @@ h1, h2, h3, h4, h5, h6 {
         padding: 20px 0;
         justify-content: center;
     }
-    
+
     .reviews-action {
         text-align: center;
     }
-    
+
     .bottom-cta-container {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
-    
+
     .location-container {
         grid-template-columns: 1fr;
         margin-bottom: 0;
         padding-bottom: 40px;
         gap: 40px;
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .main-footer {
         padding-top: 60px;
     }
-    
+
     .badges-container {
         flex-wrap: wrap;
         gap: 30px;
     }
-    
+
     .badge-divider {
         display: none;
     }
-    
+
     .badge-item {
         min-width: calc(50% - 15px);
     }
 }
 
 @media (max-width: 768px) {
+    .logo-img {
+        height: 55px;
+        /* Reduced from 80px */
+    }
+
+    .main-footer {
+        background-color: rgba(229, 205, 161, 0.3);
+        background-image: linear-gradient(to bottom, var(--bg-white) 0%, rgba(229, 205, 161, 0.3) 30%, rgba(229, 205, 161, 0) 100%), url('Fundo areia Brisa.png');
+        background-size: 180% auto;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+
+
     .hero {
         padding: 0;
         position: relative;
@@ -1109,25 +1142,25 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.1;
         margin: 0;
         color: var(--bg-white);
-        text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .hero-title em {
-    font-style: normal;
-    color: var(--sun);
-}
+        font-style: normal;
+        color: var(--sun);
+    }
 
     .hero-desc {
         font-size: 1.15rem;
-        color: var(--bg-light);
+        color: var(--bg-white);
         margin: 0 auto;
         max-width: 600px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     .hero-content .eyebrow {
         color: var(--bg-white);
-        border-top: 1px solid rgba(255,255,255,0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
         padding-top: 10px;
         display: inline-block;
         width: max-content;
@@ -1135,19 +1168,21 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-location {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 1rem;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 1rem;
+    }
 
     .hero-actions .btn-outline {
-        display: none; /* Hide Conhecer tratamentos */
+        display: none;
+        /* Hide Conhecer tratamentos */
     }
 
     .hero-actions .btn-primary {
-        display: none; /* Hide the original button entirely on mobile */
+        display: none;
+        /* Hide the original button entirely on mobile */
     }
 
     .floating-whatsapp {
@@ -1163,7 +1198,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 50%;
         background-color: var(--aqua);
         color: var(--ocean-ink);
-        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
         transition: transform 0.3s ease;
         text-decoration: none;
     }
@@ -1183,40 +1218,8 @@ h1, h2, h3, h4, h5, h6 {
     .differentials-grid {
         grid-template-columns: 1fr;
     }
-    
-    .treatments-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 16px;
-        padding-bottom: 24px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    
-    .treatments-grid::-webkit-scrollbar {
-        display: none;
-    }
 
-    .swipe-hint {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        color: var(--ocean);
-        font-size: 0.85rem;
-        font-weight: 500;
-        margin-bottom: 20px;
-        opacity: 0.8;
-    }
 
-    .treatments-grid .treatment-card {
-        min-width: 80vw;
-        width: 80vw;
-        max-width: 320px;
-        scroll-snap-align: center;
-        flex-shrink: 0;
-    }
 
     .results-images {
         grid-template-columns: 1fr;
@@ -1249,7 +1252,7 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         gap: 12px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: left;
@@ -1258,7 +1261,7 @@ h1, h2, h3, h4, h5, h6 {
     .footer-logo {
         margin-bottom: 20px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 10px;
@@ -1294,11 +1297,13 @@ h1, h2, h3, h4, h5, h6 {
     .nav-links {
         display: none;
     }
+
     .mobile-menu-btn {
         display: block;
         margin-left: auto;
     }
-    .header-container > .btn-primary {
+
+    .header-container>.btn-primary {
         display: none;
     }
 }
@@ -1342,8 +1347,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bg-white);
     padding: 30px 24px;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    border: 1px solid rgba(0,0,0,0.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1397,6 +1402,7 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(5, 1fr);
         overflow-x: visible;
     }
+
     .review-card {
         min-width: auto;
         width: auto;
@@ -1409,12 +1415,13 @@ h1, h2, h3, h4, h5, h6 {
         width: 55px !important;
         height: 55px !important;
     }
+
     .floating-whatsapp i {
         font-size: 32px !important;
     }
-    
-    
-    
+
+
+
 }
 
 
@@ -1437,7 +1444,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bg-white);
     color: var(--bg-dark);
     border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1463,7 +1470,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     padding: 0 15px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-left: -25px;
     padding-left: 35px;
     display: flex;
@@ -1471,7 +1478,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 120px;
     z-index: 1;
     position: relative;
-    
+
     /* hidden by default */
     opacity: 0;
     pointer-events: none;
@@ -1528,9 +1535,11 @@ h1, h2, h3, h4, h5, h6 {
     0% {
         box-shadow: 0 0 0 0 rgba(140, 194, 106, 0.5);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(140, 194, 106, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(140, 194, 106, 0);
     }
@@ -1541,11 +1550,13 @@ h1, h2, h3, h4, h5, h6 {
         bottom: 20px;
         left: 20px;
     }
+
     .audio-btn {
         width: 45px;
         height: 45px;
         font-size: 1.3rem;
     }
+
     .volume-slider-container {
         height: 36px;
         margin-left: -20px;
