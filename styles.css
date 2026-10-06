@@ -527,6 +527,7 @@ h6 {
     font-size: 1.4rem;
     margin-bottom: 4px;
     color: var(--bg-dark);
+    font-weight: bold;
 }
 
 .treatment-subtitle {
@@ -944,9 +945,13 @@ h6 {
     color: var(--ocean-deep);
 }
 
+.footer-logo .logo-img {
+    height: 95px;
+}
+
 .footer-links-group h4 {
     color: var(--ocean);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 20px;
     font-family: var(--font-body);
 }
@@ -958,7 +963,7 @@ h6 {
 .footer-links-group a {
     color: var(--ocean-deep);
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
 .footer-links-group a:hover {
@@ -980,7 +985,7 @@ h6 {
     margin-top: 30px;
     color: var(--ocean-ink);
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 /* Responsive */
@@ -1066,6 +1071,10 @@ h6 {
         /* Reduced from 80px */
     }
 
+    .footer-logo .logo-img {
+        height: 70px;
+    }
+
     .main-footer {
         background-color: rgba(229, 205, 161, 0.3);
         background-image: linear-gradient(to bottom, var(--bg-white) 0%, rgba(229, 205, 161, 0.3) 30%, rgba(229, 205, 161, 0) 100%), url('Fundo areia Brisa.png');
@@ -1073,8 +1082,6 @@ h6 {
         background-position: bottom center;
         background-repeat: no-repeat;
     }
-
-
     .hero {
         padding: 0;
         position: relative;
