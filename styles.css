@@ -1571,3 +1571,30 @@ h6 {
         width: 100px;
     }
 }
+
+.youtube-mobile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ocean-deep);
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.youtube-mobile-link:hover {
+    transform: scale(1.05);
+}
+
+.youtube-mobile-wrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .youtube-mobile-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px 0;
+    }
+}
